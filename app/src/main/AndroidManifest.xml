@@ -10,8 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.E04ActionBar">
         <activity
-            android:name=".SecondActivity" android:parentActivityName=".MainActivity"
-            android:exported="false">
+            android:name=".Terceira_Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -21,7 +26,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -10,12 +10,14 @@
     <item android:id="@+id/action_buscar"
         android:icon="@drawable/pesquisar"
         android:title="Buscar"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView"/>
 
     <item android:id="@+id/action_compartilhar"
         android:icon="@drawable/compartilhar"
         android:title="Compartilhar"
-        app:showAsAction="collapseActionView" />
+        app:showAsAction="collapseActionView"
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"/>
 
     <item android:id="@+id/action_configuracoes"
         android:title="Configurações"
