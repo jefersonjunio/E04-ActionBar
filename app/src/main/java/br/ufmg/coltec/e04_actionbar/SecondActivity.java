@@ -13,10 +13,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
+
+    Button bt_terceira_tela;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,15 @@ public class SecondActivity extends AppCompatActivity {
 
         ActionBar actionBar = this.getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        bt_terceira_tela = findViewById(R.id.bt_terceira_tela);
+        bt_terceira_tela.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent terceiraActivity = new Intent(SecondActivity.this, Terceira_Activity.class);
+                startActivity(terceiraActivity);
+            }
+        });
     }
 
     @Override
@@ -52,12 +64,13 @@ public class SecondActivity extends AppCompatActivity {
         ShareActionProvider shareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(shareItem);
 
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setPackage("com.whatsapp");
         intent.setType("text/*");
-        intent.putExtra(Intent.EXTRA_TEXT, "Teste");
+        intent.putExtra(Intent.EXTRA_TEXT, "Gabriella Feia");
+        Intent share = Intent.createChooser(intent, null);
+
 
         // exibe a intent
-        shareActionProvider.setShareIntent(intent);
+        shareActionProvider.setShareIntent(share);
 
         return true;
 

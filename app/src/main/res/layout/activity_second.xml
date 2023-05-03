@@ -7,13 +7,25 @@
     tools:context=".SecondActivity">
 
     <TextView
+        android:id="@+id/tv_segunda_tela"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Segunda tela"
+        android:textSize="50sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
-        >
+        android:layout_marginTop="300dp">
 
     </TextView>
+
+    <Button
+        android:id="@+id/bt_terceira_tela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abrir terceira tela"
+        android:layout_below="@+id/tv_segunda_tela"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+
+    </Button>
 
 </RelativeLayout>
